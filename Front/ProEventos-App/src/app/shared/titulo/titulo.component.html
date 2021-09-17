@@ -1,4 +1,13 @@
-
-  {{tituloPrincipal}}
-
-<hr>
+<div class="d-flex flex-row bd-highlight p-2 m-1 text-white bg-secondary card rounded shadow-sm">
+  <div class="m-2 w-100 bd-highlight">
+    <i class="{{ iconClass }} m-3"></i>
+    <div class="lh-100">
+      <h2 class="m-0">{{ tituloPrincipal }}</h2>
+      <small>{{ subtitulo }}</small>
+    </div>
+  </div>
+  <div class="p-5 flex-shrink-1 bd-highlight" *ngIf="botaoListar">
+    <button class="btn btn-outline-light" (click)="listar()">
+      Listar {{ tituloPrincipal }}</button>
+  </div>
+</div>
